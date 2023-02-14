@@ -21,13 +21,13 @@
         @endforeach
     </ul>
     -->
-    <table class="table">
-    <thead class="thead-dark">
-    <tr>
+    <table class="table table-striped">
+    <thead>
+    <tr class="thead-dark">
       <th scope="col">Id</th>
       <th scope="col">Firstname</th>
       <th scope="col">Lastname</th>
-      <th scope="col">email</th>
+      <th scope="col">Email</th>
       <th scope="col">Contact Number</th>
       <th scope="col">Address</th>
     </tr>
@@ -35,7 +35,7 @@
   <tbody>
     @foreach($customers as $customer)
     <tr>
-      <th scope="row">1</th>
+      <th scope="row" class="thead-dark">{{ $customer->id }}</th>
     
       <td>{{ $customer->firstname }}</td>
       <td>{{ $customer->lastname }}</td>
