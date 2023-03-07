@@ -1,3 +1,5 @@
+@include('partials.header')
+<x-nav/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +52,8 @@
 </table>
 </body>
 </html>
-   
+ 
+@include('partials.footer')  
  
       
 

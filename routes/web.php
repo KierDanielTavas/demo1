@@ -22,3 +22,9 @@ Route::get( '/user/{id}',[UserController::class, 'show']);
 Route::get('/customers',[CustomerController::class, 'index']);
 
 
+Route::get('/', [CustomerController::class, 'index'])->middleware('auth');
+Route::get('/register', [UserController::class, 'register']);
+Route::post('/store', [UserController::class, 'store']);
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
+Route::post('/login/process', [UserController::class, 'process']);
+Route::get('/logout', [UserController::class, 'logout']);

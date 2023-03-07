@@ -522,6 +522,7 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
                 } else {
                     throw new MassAssignmentException(sprintf(
                         'Add [%s] to fillable property to allow mass assignment on [%s].',
+                        'Add [name] to fillable property to allow mass assignment on [App\Models\Customer].',
                         $key, get_class($this)
                     ));
                 }
