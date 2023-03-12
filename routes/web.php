@@ -16,6 +16,8 @@ use App\Http\Controllers\CustomerController;
 */
 
 Route::get('/',[CustomerController::class, 'index']);
+Route::get('/delete/{id}', [UserController::class, 'delete']);
+
 
 Route::get('/users',[UserController::class, 'index']);
 Route::get( '/user/{id}',[UserController::class, 'show']);

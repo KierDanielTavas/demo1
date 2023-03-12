@@ -36,6 +36,9 @@
   </thead>
   <tbody>
     @foreach($customers as $customer)
+    @if(Session::has ('success'))
+      {{ Session::get('success') }}
+      @endif
     <tr>
       <th scope="row" class="thead-dark">{{ $customer->id }}</th>
     
@@ -45,7 +48,11 @@
       <td>{{ $customer->contactNumber }}</td>
       <td>{{ $customer->address }}</td>
       <td><button type="button" class="btn btn-primary">Edit</button></td>
-      <td><button type="button" class="btn btn-danger">Delete</button></td>
+      <td>
+      <form action= "delete/{{$customer->id}}">
+      <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+      </td>
     </tr>
        @endforeach
   </tbody>
